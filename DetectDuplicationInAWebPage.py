@@ -12,7 +12,7 @@ def clean_text(text):
     text = text.lower() # Convert to lowercase
     return text
 
-url = "https://docs.cleverbridge.com/public/all/integrating-your-system/schema-definitions-for-notifications.htm?tocpath=Developer%20Documentation%7CNotification%20Guide%7C_____3"
+url = "https://thecontentgym.wordpress.com/2022/05/09/a-non-engineer-attending-a-marathon-5-full-days-python-training-with-experienced-programmers/"
 response = requests.get(url)
 soup = BeautifulSoup(response.text, "html.parser")
 text = soup.get_text()
