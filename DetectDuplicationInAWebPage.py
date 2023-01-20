@@ -12,7 +12,7 @@ def clean_text(text):
     text = text.lower() # Convert to lowercase
     return text
 
-url = "https://thecontentgym.wordpress.com/2022/05/09/a-non-engineer-attending-a-marathon-5-full-days-python-training-with-experienced-programmers/"
+url = input("Enter page URL to check for duplication: ")
 response = requests.get(url)
 soup = BeautifulSoup(response.text, "html.parser")
 text = soup.get_text()
@@ -27,3 +27,4 @@ sentence_counter = Counter(map(clean_text, sentences))
 duplicate_sentences = [sent for sent, count in sentence_counter.items() if count > 1]
 
 print("Duplicate sentences:", duplicate_sentences)
+
